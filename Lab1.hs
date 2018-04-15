@@ -32,4 +32,5 @@ stringLower :: String -> String
 stringLower xs = [ toLower x | x <- xs ]
 
 title :: [String] -> [String]
+title [] = []
 title (xs:xss) = capitalised xs : [ if length ys > 4 then capitalised ys else stringLower ys | ys <- xss]
