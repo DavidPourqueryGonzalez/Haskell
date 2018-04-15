@@ -26,3 +26,12 @@ merge (x : xs) (y : ys) = if x < y then x : merge xs (y : ys)
                           else y : merge (x : xs) ys
 
 msort :: Ord a => [a] -> [a]
+msort [x] = [x]
+msort xs = if even (length xs) then merge firstHalf lastHalf
+           else merge firstHalf lastHalf'
+           where
+           half  = (length xs) `div` 2
+           half' = 1 + half
+           firstHalf  = msort $ take half  xs
+           lastHalf   = msort $ drop half  xs
+           lastHalf'  = msort $ drop half' xs
