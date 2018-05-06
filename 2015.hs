@@ -48,4 +48,11 @@ mapFuns :: [a->b] -> a -> [b]
 mapFuns [] _ = []
 mapFuns (f:fs) x = f x : mapFuns fs x
 
+fodlr1 :: (a -> b -> b) -> b -> [a] -> b
+foldr1 f z [] = z
+foldr1 f z (x:xs) = f x (foldr1 f z xs)
+
+
+
+
 
