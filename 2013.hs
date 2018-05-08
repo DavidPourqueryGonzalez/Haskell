@@ -1,3 +1,5 @@
+-- solutions to haskell questions of 2013 paper
+
 import Data.List
 
 maximum1 :: (Ord a) => [a] -> a
