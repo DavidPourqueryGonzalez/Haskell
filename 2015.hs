@@ -1,4 +1,4 @@
--- solutions to most haskell questions of 2015 paper
+-- solutions to haskell questions of 2015 paper
 
 insert :: Integer -> [Integer] -> [Integer]
 insert x [] = [x]
